@@ -3,10 +3,14 @@
     <StackLayout VerticalOptions="Center"
         Margin="20">
         <Entry x:Name="usuarioEntry" 
+        TextColor="{StaticResource accentColor}"
         Placeholder="Nombre de Usuario" />
-        <Entry x:Name="passwordEntry" 
+        <Entry x:Name="passwordEntry"    
+        TextColor="{StaticResource accentColor}"
         Placeholder="Contraseña" IsPassword="true" />
         <Button Text="Iniciar Sesión" 
+        BackgroundColor="{StaticResource accentColor}"
+        TextColor="{StaticResource buttonTextColor}"
         Clicked="Handle_Clicked"/>
         <Label x:Name="resultadoLabel"
         HorizontalOptions="Center" />

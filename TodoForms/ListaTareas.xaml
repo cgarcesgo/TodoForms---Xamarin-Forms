@@ -4,7 +4,14 @@
         <ListView.ItemTemplate> 
             <DataTemplate>
                 <TextCell Text="{Binding Nombre}"
-                Detail="{Binding Fecha}"/>
+                Detail="{Binding Fecha}"
+                DetailColor = "{StaticResource accentColor}">
+                    <TextCell.ContextActions>
+                        <MenuItem Clicked="Handle_Clicked"
+                        Text="Completar"
+                        CommandParameter="{Binding}"/>
+                    </TextCell.ContextActions>
+                </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

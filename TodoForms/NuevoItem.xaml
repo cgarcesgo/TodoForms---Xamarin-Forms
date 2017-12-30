@@ -11,16 +11,33 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Entry x:Name="nombreEntry" 
+
+        <Label Text="Nueva tarea"
+        Style="{StaticResource titleLabel}"/>
+        <Label Text="Nombre de la tarea"
+            Style="{StaticResource subtitleLabel}"
+        Grid.Row="1"/>
+        <Entry x:Name="nombreEntry"  Grid.Row="2"
         Placeholder="Nombre de la tarea"
         Grid.ColumnSpan="2"/>
 
-        <DatePicker Grid.Row="1" 
+        <Label Text="Fecha y hora límite" 
+            Grid.Row="3"
+            Style="{StaticResource subtitleLabel}"/>
+
+        <DatePicker TextColor="{StaticResource accentColor}"
+        Grid.Row="4"
         x:Name="fechaLimiteDatePicker"/>
-        <TimePicker Grid.Row="1" Grid.Column="1"
+
+
+        <TimePicker Grid.Row="4" Grid.Column="1"
         x:Name="horaLimiteTimePicker"/>
 
-        <Button Text="Guardar" Grid.Row="2" 
-        Grid.ColumnSpan="2" Clicked="Handle_Clicked" />
+        <Button Text="Guardar" 
+        BackgroundColor="{StaticResource accentColor}"
+        TextColor="{StaticResource buttonTextColor}"
+        Grid.Row="5"
+        Grid.ColumnSpan="2"
+        Clicked="Handle_Clicked" />
     </Grid>
 </ContentPage>

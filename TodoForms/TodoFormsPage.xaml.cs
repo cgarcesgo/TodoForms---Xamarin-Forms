@@ -15,7 +15,7 @@ namespace TodoForms
                 resultadoLabel.Text = "Debe escribir usuario y contraseña";
             } else {
                 resultadoLabel.Text = "Inicio de sesión exitoso";
-                await Navigation.PushAsync(new NuevoItem(), true);
+                await Navigation.PushAsync(new ListaTareas(), true);
             }
         }
     }
