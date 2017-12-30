@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TodoForms.NuevoItem">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Entry x:Name="nombreEntry" 
+        Placeholder="Nombre de la tarea"
+        Grid.ColumnSpan="2"/>
+
+        <DatePicker Grid.Row="1" 
+        x:Name="fechaLimiteDatePicker"/>
+        <TimePicker Grid.Row="1" Grid.Column="1"
+        x:Name="horaLimiteTimePicker"/>
+
+        <Button Text="Guardar" Grid.Row="2" 
+        Grid.ColumnSpan="2" Clicked="Handle_Clicked" />
+    </Grid>
+</ContentPage>
